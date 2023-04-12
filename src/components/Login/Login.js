@@ -47,25 +47,34 @@ class Login extends React.Component {
           password: this.state.password
         })
       })
-      .then((res) => {
-        if (res.status === 200) {
-          return res.json();
-        } else {
-          throw new Error(res.error);
-        }
-      })
-      .then((data) => {
-        localStorage.setItem('token', data.token);
-        //console.log("mliha")
-      })
-      //window.location.href="/admin"
-          notification.success({
-            message: 'Login successful',
-            description: 'You have successfully logged in!'
-          });
-          setTimeout(() => {
-            window.location.href="/admin"
-          }, 800);
+      const data = await response.json();
+      const { userclinique } = data;
+      if (userclinique) {
+        notification.success({
+          message: 'Login successful',
+          description: 'You have successfully logged in!'
+        });
+        setTimeout(() => {
+          switch (userclinique) {
+            case 'admin':
+              window.location.href="/admin"
+              break;
+            case 'docteur':
+              window.location.href="/doctor"
+              break;
+            case 'receptioniste':
+              window.location.href="/reception"
+              break;
+          }
+        }, 800);}
+      else {
+        const errorMessage = await response.json();
+        notification.warning({
+          message: 'Login failed',
+          description: errorMessage.message
+        });
+      }
+
     } catch (error) {
       notification.warning({
         message: 'Login failed',

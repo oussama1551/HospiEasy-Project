@@ -1,4 +1,4 @@
-import './SidebarDoctor.css';
+import './SidebarReception.css';
 import { RxDashboard } from "react-icons/rx";
 import { AiFillSetting } from "react-icons/ai";
 
@@ -30,7 +30,7 @@ import {
   const { Header, Sider, Content } = Layout;
 
   
-  const SidebarDoctor = () => {
+  const SideBarReception = () => {
     const [collapsed, setCollapsed] = useState(false);
     const {
       token: { colorBgContainer },
@@ -172,7 +172,7 @@ import {
                   />
                 </div>
                 <div>
-                  <p className='mb-0'>Médecin</p>
+                  <p className='mb-0'>Reception</p>
 
                   <h6 className='mb-0'>Belakhdar Oussama</h6>
                 </div>
@@ -191,4 +191,4 @@ import {
       </Layout>
     );  
   };
-  export default SidebarDoctor;
+  export default SideBarReception;

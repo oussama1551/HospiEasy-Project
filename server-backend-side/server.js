@@ -172,10 +172,25 @@ app.post('/api/login', async (req, res) => {
   if (!user) {
     return res.status(401).json({ message: 'Invalid credentials' });
   }
-
-  res.status(200).json({ message: 'Login successful' });
+  if (user) {
+    res.status(200).send({ userclinique: user.userclinique });
+  }
+  
 });
-
+//res.status(200).send({ message: 'Login successful' });
+/*app.post('/api/login', (req, res) => {
+  const { userclinic, password } = req.body;
+  const sql = `SELECT userclinique FROM UsersClinic WHERE userclinique=${userclinic} AND password=${password}`;
+  pool.query(sql, (err, result) => {
+    if (err) throw err;
+    if (result.length > 0) {
+      const user = result[0].userclinic;
+      res.status(200).send({ user });
+    } else {
+      res.status(401).send('Invalid username or password');
+    }
+  });
+});*/
 
 
 app.listen(4000, () => {
