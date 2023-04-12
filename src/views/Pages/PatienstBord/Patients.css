@@ -1,0 +1,23 @@
+.card{
+  width: 97%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 700px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.btn-inner--text{
+  font-family: 'Poppins', sans-serif;
+}
+.btn-inner2--icon{
+  color: #32CD32;
+  
+}
+.btn-inner1--icon{
+  color: #5e72e4;
+  
+}
+.btn-inner3--icon{
+  color: red;
+  
+}

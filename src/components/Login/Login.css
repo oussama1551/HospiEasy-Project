@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.TC{
+    margin-bottom:  1.5rem;
+    margin-left: 0.1rem;
+    font-family: 'Poppins', sans-serif !important
+}
+.inpuut {
+    margin-bottom:  1.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important
+  }
+  
+.col {
+    top: -60px;
+}
+.ttt{
+    font-family: 'Poppins', sans-serif;
+}
