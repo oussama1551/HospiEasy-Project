@@ -262,7 +262,7 @@ function Patients () {
                   <Input placeholder='Enter Nom Patient' value={NomPatient} onChange={e => setNomPatient(e.target.value)} required/>
                 </Form.Item>
                 <Form.Item label="Age" >
-                  <input type="number" value={AgePatient} onChange={e => setAgePatient(e.target.value)} />
+                  <Input type="number" value={AgePatient} onChange={e => setAgePatient(e.target.value)} />
                 </Form.Item>
                 <Form.Item label="Adresse">
                   <Input placeholder='Enter Adresse Patient' value={AdressePatient} onChange={e => setAdressePatient(e.target.value)} required/>

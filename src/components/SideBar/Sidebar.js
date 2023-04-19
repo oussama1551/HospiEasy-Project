@@ -67,7 +67,7 @@ import {
               {
                 key: '',
                 icon: <RxDashboard />,
-                label: 'Tableau de bord',
+                label: 'Planification',
               },
 
               {key: 'Patients',

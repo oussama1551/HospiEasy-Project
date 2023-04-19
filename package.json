@@ -21,9 +21,12 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@syncfusion/ej2-react-schedule": "^21.1.39",
+    "@syncfusion/ej2-schedule": "^21.1.39",
     "antd": "^5.4.0",
     "bootstrap": "4.3.1",
     "classnames": "2.3.1",
+    "cldr-data": "^36.0.1",
     "gh": "^2.8.9",
     "headroom.js": "0.12.0",
     "moment": "2.29.4",
